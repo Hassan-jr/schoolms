@@ -2,6 +2,8 @@
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Drivers from "layouts/drivers";
+import Parents from "layouts/parents";
+import Teachers from "layouts/teachers";
 import Billing from "layouts/billing";
 // import RTL from "layouts/rtl";
 // import Notifications from "layouts/notifications";
@@ -22,6 +24,33 @@ const routes = [
     route: "/dashboard",
     component: <Dashboard />,
   },
+  // Owner Operator
+  {
+    type: "collapse",
+    name: "Parents",
+    key: "oop",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "Parents",
+    component: <Parents />,
+  },
+  // Driver
+  {
+    type: "collapse",
+    name: "Students",
+    key: "driver",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "Students",
+    component: <Drivers />,
+  },
+  // Units
+  {
+    type: "collapse",
+    name: "Teachers",
+    key: "units",
+    icon: <Icon fontSize="small">people</Icon>,
+    route: "teachers",
+    component: <Teachers />,
+  },
   // Loads
   {
     type: "collapse",
@@ -31,7 +60,16 @@ const routes = [
     route: "/staff",
     component: <Tables />,
   },
-  // billing index 0 as submenu
+  // Brocker/Factoring
+  {
+    type: "collapse",
+    name: "Text Messages",
+    key: "brocker",
+    icon: <Icon fontSize="small">view_comfy</Icon>,
+    route: "Text Messages",
+    component: <Drivers />,
+  },
+  // Registration
   {
     type: "submenu",
     name: "Registration",
@@ -61,23 +99,9 @@ const routes = [
         route: "/OtherStaffs",
         component: "",
       },
-      // {
-      //   name: "Dispatch Invoice",
-      //   key: "dispatchInvoice",
-      //   icon: <Icon fontSize="small">receipt_long</Icon>,
-      //   route: "",
-      //   component: "",
-      // },
-      // {
-      //   name: "Staff Invoice",
-      //   key: "staffIvoice",
-      //   icon: <Icon fontSize="small">receipt_long</Icon>,
-      //   route: "",
-      //   component: "",
-      // },
     ],
   },
-  // Deducts adn incomes index 1
+  // FEES
   {
     type: "submenu",
     name: "Payments",
@@ -114,173 +138,8 @@ const routes = [
         route: "Expenses",
         component: <Billing />,
       },
-      // Other Earning
-      // {
-      //   name: "OOP Other Earning",
-      //   key: "oopEarning",
-      //   icon: <Icon fontSize="small">monetization_on</Icon>,
-      //   route: "",
-      //   component: "",
-      // },
-      // {
-      //   name: "Driver Other Earning",
-      //   key: "driverEarning",
-      //   icon: <Icon fontSize="small">monetization_on</Icon>,
-      //   route: "/billing/OOPInvoice",
-      //   component: <Billing />,
-      // },
-      // {
-      //   name: "Dispatch Other Earning",
-      //   key: "dispatchEarning",
-      //   icon: <Icon fontSize="small">monetization_on</Icon>,
-      //   route: "",
-      //   component: "",
-      // },
-      // {
-      //   name: "Staff Other Earning",
-      //   key: "staffEarning",
-      //   icon: <Icon fontSize="small">monetization_on</Icon>,
-      //   route: "",
-      //   component: "",
-      // },
     ],
   },
-  // Brocker/Factoring
-  {
-    type: "collapse",
-    name: "Text Messages",
-    key: "brocker",
-    icon: <Icon fontSize="small">view_comfy</Icon>,
-    route: "Text Messages",
-    component: <Drivers />,
-  },
-  // Owner Operator
-  {
-    type: "collapse",
-    name: "Parents",
-    key: "oop",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "Parents",
-    component: <Drivers />,
-  },
-  // Driver
-  {
-    type: "collapse",
-    name: "Students",
-    key: "driver",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "Students",
-    component: <Drivers />,
-  },
-  // Units
-  {
-    type: "collapse",
-    name: "Teachers",
-    key: "units",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "teachers",
-    component: <Drivers />,
-  },
-  // Dispatcher
-  {
-    type: "collapse",
-    name: "Non Academic Staff",
-    key: "dispatcher",
-    icon: <Icon fontSize="small">people</Icon>,
-    route: "Non Acamedic Staff",
-    component: <Drivers />,
-  },
-  // // Staff
-  // {
-  //   type: "collapse",
-  //   name: "Staff",
-  //   key: "Staff",
-  //   icon: <Icon fontSize="small">person</Icon>,
-  //   route: "staff",
-  //   component: <Drivers />,
-  // },
-  // // File Manager index 2 as submenu
-  // {
-  //   type: "submenu",
-  //   name: "File Manager",
-  //   key: "fileManager",
-  //   icon: <Icon fontSize="small">folder</Icon>,
-  //   state: false,
-  //   index: 2,
-  //   collapse: [
-  //     {
-  //       name: "Company Files",
-  //       key: "companyFile",
-  //       icon: <Icon fontSize="small">source</Icon>,
-  //       route: "",
-  //       component: "",
-  //     },
-  //     {
-  //       name: "OOP Files",
-  //       key: "oopFiles",
-  //       icon: <Icon fontSize="small">source</Icon>,
-  //       route: "",
-  //       component: "",
-  //     },
-  //     {
-  //       name: "Driver Files",
-  //       key: "driverFiles",
-  //       icon: <Icon fontSize="small">source</Icon>,
-  //       route: "",
-  //       component: "",
-  //     },
-  //     {
-  //       name: "Dispatch Files",
-  //       key: "dispatchFiles",
-  //       icon: <Icon fontSize="small">source</Icon>,
-  //       route: "",
-  //       component: "",
-  //     },
-  //     {
-  //       name: "Staff Files",
-  //       key: "staffFiles",
-  //       icon: <Icon fontSize="small">source</Icon>,
-  //       route: "",
-  //       component: "",
-  //     },
-  //   ],
-  // },
-  // // Task Due and Notes
-  // {
-  //   type: "collapse",
-  //   name: "Tasks & Notes",
-  //   key: "tasks",
-  //   icon: <Icon fontSize="small">task</Icon>,
-  //   route: "",
-  //   component: "",
-  // },
-  // // Reports and Summary
-  // {
-  //   type: "collapse",
-  //   name: "Reports & Summary",
-  //   key: "reports",
-  //   icon: <Icon fontSize="small">summarize</Icon>,
-  //   route: "/notifications",
-  //   component: <Notifications />,
-  // },
-  // // Users
-  // {
-  //   type: "collapse",
-  //   name: "Users",
-  //   key: "users",
-  //   icon: <Icon fontSize="small">people</Icon>,
-  //   route: "",
-  //   component: "",
-  // },
-  // // Profile
-  // {
-  //   type: "collapse",
-  //   name: "Company Profile",
-  //   key: "profile",
-  //   icon: <Icon fontSize="small">person</Icon>,
-  //   route: "/profile",
-  //   component: <Profile />,
-  // },
   // sign in
   {
     type: "collapse",
