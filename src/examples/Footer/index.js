@@ -101,7 +101,7 @@ function Footer({ company, links }) {
 Footer.defaultProps = {
   company: { href: "https://www.relsoftonline.com/", name: "RelSoft" },
   links: [
-    { href: "https://www.relsoftonline.com/", name: "TiMS GLANCER" },
+    { href: "https://www.relsoftonline.com/", name: "RELSOFT" },
     { href: "https://www.relsoftonline.com/about/who-we-are/", name: "About Us" },
     { href: "https://www.relsoftonline.com/software-development-2/", name: "Services" },
     { href: "https://www.relsoftonline.com/contact/", name: "Contact" },
