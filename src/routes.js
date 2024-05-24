@@ -6,7 +6,7 @@ import Parents from "layouts/parents";
 import Teachers from "layouts/teachers";
 import Billing from "layouts/billing";
 // import RTL from "layouts/rtl";
-// import Notifications from "layouts/notifications";
+import Notifications from "layouts/notifications";
 // import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
@@ -66,8 +66,8 @@ const routes = [
     name: "Text Messages",
     key: "brocker",
     icon: <Icon fontSize="small">view_comfy</Icon>,
-    route: "Text Messages",
-    component: <Drivers />,
+    route: "messages",
+    component: <Notifications />,
   },
   // Registration
   {
@@ -164,89 +164,10 @@ const routes = [
     name: "Logout",
     key: "logout",
     icon: <Icon fontSize="small">logout</Icon>,
-    route: "#",
+    route: "",
+    href: "https://relsoft-isp.vercel.app/",
     component: "",
   },
 ];
 
 export default routes;
-
-// [
-//   {
-//     name: "pages",
-//     columns: 3,
-//     rowsPerColumn: 2,
-//     collapse: [
-//       {
-//         name: "dashboards",
-//         icon: <Icon>dashboard</Icon>,
-//         collapse: [
-//           {
-//             name: "analytics",
-//             route: "/dashboards/analytics",
-//           },
-//           {
-//             name: "sales",
-//             route: "/dashboards/sales",
-//           },
-//         ],
-//       },
-//       {
-//         name: "users",
-//         icon: <Icon>people</Icon>,
-//         collapse: [
-//           {
-//             name: "reports",
-//             route: "/pages/users/reports",
-//           },
-//         ],
-//       },
-//     ],
-//   },
-//   {
-//     name: "authenticaton",
-//     collapse: [
-//       {
-//         name: "sign in",
-//         dropdown: true,
-//         icon: <Icon>login</Icon>,
-//         collapse: [
-//           {
-//             name: "basic",
-//             route: "/authentication/sign-in/basic",
-//           },
-//           {
-//             name: "cover",
-//             route: "/authentication/sign-in/cover",
-//           },
-//           {
-//             name: "illustration",
-//             route: "/authentication/sign-in/illustration",
-//           },
-//         ],
-//       },
-//       {
-//         name: "sign up",
-//         dropdown: true,
-//         icon: <Icon>assignment</Icon>,
-//         collapse: [
-//           {
-//             name: "cover",
-//             route: "/authentication/sign-up/cover",
-//           },
-//         ],
-//       },
-//       {
-//         name: "reset password",
-//         dropdown: true,
-//         icon: <Icon>restart_alt</Icon>,
-//         collapse: [
-//           {
-//             name: "cover",
-//             route: "/authentication/reset-password/cover",
-//           },
-//         ],
-//       },
-//     ],
-//   },
-// ]
